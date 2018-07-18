@@ -1,0 +1,68 @@
+﻿[
+  {
+    "id": 1,
+    "name": "Argo",
+    "releaseDate": "2012-10-04T04:00:00.000Z",
+    "genre": "Drama",
+    "producer": "Producer Argo",
+    "director": "Director Argo",
+    "musicDirector": "MusicDirector Argo",
+    "runningTime": 140,
+    "language": "English",
+    "trailer": "https://www.youtube.com/watch?v=9wCwLfDG1us",
+    "cast": [
+      {
+        "name": "NameX",
+        "character": "Hero"
+      },
+      {
+        "name": "NameY",
+        "character": "Heroine"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "The Hurt Locker",
+    "releaseDate": "2009-01-29T05:00:00.000Z",
+    "genre": "Drama",
+    "producer": "Producer The Hurt Locker",
+    "director": "Director The Hurt Locker",
+    "musicDirector": "MusicDirector The Hurt Locker",
+    "runningTime": 142,
+    "language": "English",
+    "trailer": "https://www.youtube.com/watch?v=9wCwLfDG1us",
+    "cast": [
+      {
+        "name": "NameA",
+        "character": "Hero"
+      },
+      {
+        "name": "NameB",
+        "character": "Heroine"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "The Artist",
+    "releaseDate": "2011-11-23T05:00:00.000Z",
+    "genre": "Drama",
+    "producer": "Producer The Artist",
+    "director": "Director The Artist",
+    "musicDirector": "MusicDirector The Artist",
+    "runningTime": 142,
+    "language": "English",
+    "trailer": "https://www.youtube.com/watch?v=9wCwLfDG1us",
+    "cast": [
+      {
+        "name": "NameP",
+        "character": "Hero"
+      },
+      {
+        "name": "NameQ",
+        "character": "Heroine"
+      }
+    ]
+  }
+]

@@ -3,7 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { UiModule } from './ui/ui.module';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
+
+import { HttpClientModule } from '@angular/common/http';
+import { MovieService } from './services/movie.service';
 
 @NgModule({
   declarations: [
@@ -12,9 +15,12 @@ import { AppRoutingModule } from './/app-routing.module';
   imports: [
     BrowserModule,
     UiModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    MovieService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,15 +1,23 @@
 <header>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-2 justify-content-between">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-1 justify-content-between">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <h2>
+            <a class="navbar-brand mb-2">
+                <h2 style="font-size: 1.8em;">
                     <span style="background-color: #f4c613; color: #212226;" class="badge badge-secondary">BlackTicket</span>
                 </h2>
             </a>
-            <form class="form-inline">
+            <!-- <form class="form-inline">
                 <input class="form-control mr-sm-2" type="" placeholder="Search for cities" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Find</button>
-            </form>
+            </form> -->
+            <div class="col-lg-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for cities">
+                        <span class="input-group-btn">
+                            <button class="btn btn-secondary" type="button">Go!</button>
+                        </span>
+                    </div>
+                </div>
         </div>
     </nav>
 </header>

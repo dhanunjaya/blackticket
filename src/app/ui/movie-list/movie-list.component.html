@@ -1,0 +1,3 @@
+<app-layout>
+        <app-movie-summary *ngFor="let movie of movies" [movie]="movie" (movieClick)="userClickedOnMovie($event)"></app-movie-summary>
+</app-layout>
