@@ -13,10 +13,6 @@ export class MovieDetailsComponent implements OnInit {
 
   movie: Movie;
 
-  private video: {
-    safeUrl: any;
-  };
-
   constructor(private route: ActivatedRoute, private movieService: MovieService, private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
@@ -25,13 +21,11 @@ export class MovieDetailsComponent implements OnInit {
       this.movieService.getMovieById(movie_id)
         .subscribe((movie) => {
           this.movie = movie;
-          this.video.safeUrl = this.getSantizeUrl(this.movie.trailer);
+          const trailer_id = document.getElementById('trailer-id');
+          trailer_id.setAttribute('src', this.movie.trailer);
+          console.log('trailer_id', trailer_id);
         });
     });
   }
-
-  public getSantizeUrl(url: string) {
-    return this.sanitizer.bypassSecurityTrustUrl(url);
-  }
-
 }
+

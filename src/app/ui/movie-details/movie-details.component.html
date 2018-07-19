@@ -4,15 +4,36 @@
     <div class="col-sm-3">
       <div class="card">
         <img class="card-img-top img-fluid" src="../../../assets/{{movie.imageName}}.jpg" alt="movie-poster" style="height: 354px; width: 278px;">
+        <button type="button" class="btn btn-info">Book Tickets</button>
       </div>
     </div>
     <div class="col-sm-9">
-      <div class="card">
-        <div class="embed-responsive embed-responsive-21by9">
-          <iframe width="560" height="315" src="video.safeUrl" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
+      <div class="embed-responsive embed-responsive-21by9">
+        <iframe id="trailer-id" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
+  </div>
+  <div class="card summary_text" style="border: 0;">
+    <div style="margin-top: 20px;">
+      <p>{{ movie.description }}</p>
+    </div>
+    <p><strong>Director:</strong> {{ movie.director }}</p>
+    <p><strong>Music:</strong> {{ movie.musicDirector }}</p>
+    <p><strong>Producer: </strong>{{ movie.producer }}</p>
+    <p><strong>Movie Details: </strong>{{ movie.language }} | {{ movie.genre }} | {{ movie.runningTime }}</p>
+  </div>
+  <div>
+    <div><strong>Cast</strong></div>
+    <div>
+    <table class="table table-striped cast-list">
+      <tbody>
+        <tr *ngFor="let cast of movie.cast">
+          <td>{{ cast.name }}</td>
+          <td>{{ cast.character }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
   </div>
 </div>
 <app-footer></app-footer>

@@ -12,7 +12,7 @@ export class MovieSummaryComponent implements OnInit {
   movie: Movie;
 
   @Output()
-  movieClick: EventEmitter<number> = new EventEmitter();
+  movieClick: EventEmitter<string> = new EventEmitter();
 
   constructor() { }
 

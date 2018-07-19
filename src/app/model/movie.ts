@@ -4,7 +4,7 @@ export interface Cast {
 }
 
 export interface Movie {
-    id: number;
+    id: string;
     name: string;
     releaseDate: string;
     genre: string;
