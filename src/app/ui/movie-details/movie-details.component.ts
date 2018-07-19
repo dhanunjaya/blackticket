@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Movie } from '../../model/movie';
 import { MovieService } from '../../services/movie.service';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-movie-details',
@@ -12,13 +13,25 @@ export class MovieDetailsComponent implements OnInit {
 
   movie: Movie;
 
-  constructor(private route: ActivatedRoute, private movieService: MovieService) { }
+  private video: {
+    safeUrl: any;
+  };
+
+  constructor(private route: ActivatedRoute, private movieService: MovieService, private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
-    const movie_id = +this.route.snapshot.paramMap.get('movie_id');
-    this.movieService.getMovieById(movie_id)
-        .subscribe(movie => this.movie = movie);
-    console.log('Movie details', this.movie);
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      const movie_id = params.get('movie_id');
+      this.movieService.getMovieById(movie_id)
+        .subscribe((movie) => {
+          this.movie = movie;
+          this.video.safeUrl = this.getSantizeUrl(this.movie.trailer);
+        });
+    });
+  }
+
+  public getSantizeUrl(url: string) {
+    return this.sanitizer.bypassSecurityTrustUrl(url);
   }
 
 }

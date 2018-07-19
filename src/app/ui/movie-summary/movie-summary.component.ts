@@ -21,7 +21,6 @@ export class MovieSummaryComponent implements OnInit {
 
   public movieClicked() {
     this.movieClick.emit(this.movie.id);
-    console.log('Someone clicked', this.movie.id);
   }
 
 }
